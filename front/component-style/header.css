@@ -1,0 +1,64 @@
+.header{
+    height:10vh;
+    width:100%;
+    padding:1vh 5vw;
+}
+
+nav{
+    height:100%;
+    width:100%;
+}
+
+nav ul{
+    height:100%;
+    width:100%;
+    display:flex;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+.header-outerlist{
+    justify-content: space-between;
+    align-items: center;
+}
+.header-mainlogo{
+    font-size:2vh;
+    color:#10288C;
+    letter-spacing: 1vw;
+}
+
+.header-mainlogo h1{
+    font-family: "Angkor";
+}
+
+.header-innerlist{
+    gap:4vw;
+    align-items: center;
+}
+
+.header-changelanguage{
+    height:5vh;
+    padding:0 4vw;
+    border-radius: 5px;
+    border:2px solid #10288C;
+    background: #EAF6AD;
+    color:#10288C;
+    font-size:2vh;
+    appearance: none;
+    font-weight:500;
+    display:flex;
+}
+
+.header-changetheme{
+    height:3vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding:1vh;
+    background: #10288C;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}

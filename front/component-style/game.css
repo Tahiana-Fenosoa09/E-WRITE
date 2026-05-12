@@ -1,0 +1,42 @@
+.section-game{
+    height:100vh;
+    width:100%;
+    display:flex;
+}
+
+.game-navigation{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:10vh;
+    padding:3vh;
+    background-color:#10288C;
+    color:#EAF6AD;
+    height:100%;
+    width:15%;
+    position: relative;
+}
+
+.game-navigation-d h3{
+    display:flex;
+    align-items: center;
+    gap:2vw;
+}
+
+.game-navigation-d i{
+    text-align:left;
+}
+
+.game-navigation-showhide{
+    background:#10288C;
+    width:5vw;
+    padding:1vh;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    border-radius:0px 20px 20px 0;
+    position: absolute;
+    top:0%;
+    right:-20%;
+}
+

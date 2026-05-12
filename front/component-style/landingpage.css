@@ -1,0 +1,58 @@
+.section-landingpage{
+    height:90vh;
+    width:100%;
+    padding:1vh 2vh;
+}
+
+.landingpage-mainactions{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:5vh;
+    align-items: center;
+    border-radius: 20px;
+    font-size:5vh;
+}
+
+.landingpage-mainactions h1{
+    color:#10288C;
+    font-family: "Angkor";
+}
+
+.landingpage-mainactions i{
+    color:#10288C;
+}
+
+.landingpage-mainactions p{
+    text-align: center;
+    font-size:3vh;
+    max-width: 50%;
+}
+
+.landingpage-actions{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:5vw;
+}
+
+.landingpage-actions button{
+    padding:2vh 4vw;
+    border-radius: 10px;
+    border:none;
+    font-size:2.5vh;
+    font-weight:600;
+    border:2px solid #10288C;
+}
+
+.actions-createaccount{
+    background:#EAF6AD;
+    color:#10288C;
+}
+
+.actions-learnmore{
+    background: #10288C;
+    color:#EAF6AD;
+}
