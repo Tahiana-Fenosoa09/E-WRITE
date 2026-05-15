@@ -1,12 +1,17 @@
 .game-settings{
     height:100vh;
     width:100%;
-    display:flex;
+    display:none;
     padding:10vh 5vh;
     align-items: center;
     flex-direction: column;
     gap:5vh;
+
 }
+
+/* .game-settings-show{
+    display:flex !important;
+} */
 
 .game-settings h1{
     font-size:5vh;

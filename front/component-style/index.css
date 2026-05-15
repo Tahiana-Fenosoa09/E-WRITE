@@ -13,6 +13,7 @@ body{
     background: #EAF6AD;
     overflow-x: hidden;
     /* max-width:96vw; */
+    position: relative;
 }
 
 body::-webkit-scrollbar{
@@ -22,4 +23,22 @@ body::-webkit-scrollbar{
 
 body::-webkit-scrollbar-thumb{
     background: #EAF6AD;
+}
+
+.modal{
+    width:100%;
+    height:100%;
+    background:black;
+    position:absolute;
+    opacity:0.1;
+    display:none;
+    z-index: 2;
+}
+
+.modal-show{
+    display:block !important;
+}
+
+.main-hide{
+    display:none;
 }

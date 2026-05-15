@@ -2,9 +2,13 @@
     width:90%;
     height:100%;
     padding:2vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap:2vh;
+}
+
+.game-dashboard-pagename{
+    margin-left:3.5vw;
 }
 
 .dashboard-text{

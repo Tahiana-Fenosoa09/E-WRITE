@@ -1,7 +1,11 @@
 .section-game{
     height:100vh;
     width:100%;
-    display:flex;
+    display:none;
+}
+
+.section-game-show{
+    display:flex !important;
 }
 
 .game-navigation{
@@ -13,9 +17,25 @@
     background-color:#10288C;
     color:#EAF6AD;
     height:100%;
-    width:15%;
+    width:0%;
     position: relative;
+    transition:width 1s linear;
 }
+
+.span-game{
+    display:none;
+    animation:show 2s linear;
+}
+
+@keyframes show {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 
 .game-navigation-d h3{
     display:flex;
@@ -30,13 +50,14 @@
 .game-navigation-showhide{
     background:#10288C;
     width:5vw;
-    padding:1vh;
+    padding:3vh;
     display:flex;
     justify-content: right;
     align-items: center;
     border-radius:0px 20px 20px 0;
     position: absolute;
     top:0%;
-    right:-20%;
+    right:-30%;
 }
+
 

@@ -16,59 +16,613 @@
     <link rel="stylesheet" href="component-style/game-community.css">
     <link rel="stylesheet" href="component-style/game-settings.css">
     <link rel="stylesheet" href="component-style/game-tutorials.css">
+    <link rel="stylesheet" href="component-style/game-boards.css">
+    <link rel="stylesheet" href="component-style/learn-more.css">
 </head>
 
 <body>
+    <main class="opening">
+        <div class="modal">
+        </div>
+        <header class="header">
+            <nav>
+                <ul class="header-outerlist">
+                    <li>
+                        <div class="header-mainlogo">
+                            <h1>E-WRITE</h1>
+                        </div>
+                    </li>
+
+                    <li>
+                        <ul class="header-innerlist">
+                            <select name="" class="header-changelanguage">
+                                <option value="eng">English</option>
+                                <option value="mlg">Malagasy</option>
+                                <option value="frc">Francais</option>
+                            </select>
+                            <div class="header-changetheme">
+                                <i class="fa-regular fa-lightbulb fa-xl"></i>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="section-ourvalues">
+            <div class="values">write fast</div>
+            <div class="values">write clean</div>
+            <div class="values">type neat</div>
+            <div class="values">write better</div>
+            <div class="values">stop mistakes</div>
+        </section>
+
+        <section class="section-landingpage">
+            <div class="landingpage-mainactions">
+                <i class="fa-solid fa-home fa-2xl"></i>
+                <h1>e-write home page </h1>
+                <p>Other typing games lets you practice, we teach you how to write step by step until you can write
+                    faster
+                    and
+                    cleaner</p>
+                <div class="landingpage-actions">
+                    <button class="actions-createaccount">Create an account</button>
+                    <button class="actions-learnmore">Learn more</button>
+                </div>
+                <div class="landingpage-links">
+
+                </div>
+            </div>
+            <div class="learn-more">
+                <div class="learn-more-content">
+                    <div class="learn-more-exit">
+                        <i class="fa-solid fa-x fa-xl"></i>
+
+                    </div>
+
+                    <h1>LEARN MORE</h1>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <form class="footer-feedback">
+                <h1>How did you find the app?</h1>
+                <div class="footer-feedback-good">
+                    <input type="radio" id="client-feedback-good">
+                    <label for="client-feedback-good">It was good</label>
+                </div>
+                <div class="footer-feedback-good">
+                    <input type="radio" id="client-feedback-good">
+                    <label for="client-feedback-good">It was average</label>
+                </div>
+                <div class="footer-feedback-good">
+                    <input type="radio" id="client-feedback-good">
+                    <label for="client-feedback-good">There is still room to impove</label>
+                </div>
+                <div class="footer-feedback-good">
+                    <input type="radio" id="client-feedback-good">
+                    <label for="client-feedback-good">Sadly,it was bad</label>
+                </div>
+                <button>Submit</button>
+            </form>
+            <div class="footer-rate">
+                <h1>Rate our app by filling the stars</h1>
+                <div class="footer-ratestars">
+                    <div class="footer-stars">
+                        <i class="fa-regular fa-star fa-2xl"></i>
+                    </div>
+                    <div class="footer-stars">
+                        <i class="fa-regular fa-star fa-2xl"></i>
+                    </div>
+                    <div class="footer-stars">
+                        <i class="fa-regular fa-star fa-2xl"></i>
+                    </div>
+                    <div class="footer-stars">
+                        <i class="fa-regular fa-star fa-2xl"></i>
+                    </div>
+                    <div class="footer-stars">
+                        <i class="fa-regular fa-star fa-2xl"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <h1>E-WRITE</h1>
+            </div>
+        </footer>
+    </main>
+
     <section class="section-game">
         <div class="game-navigation">
-            <div class="game-navigation-d">
-                <h3><i class="fa-solid fa-home"></i><span>Dashboard</span></h3>
+            <div class="game-mainlogo">
+                <h1>E-WRITE</h1>
             </div>
-            <div class="game-navigation-d">
-                <h3><i class="fa-solid fa-people-line"></i><span> Community</span></h3>
+            <div class="game-navigation-d game-navigation-dashboard">
+                <h3><i class="fa-solid fa-home"></i><span class="span-game">Dashboard</span></h3>
             </div>
-            <div class="game-navigation-d">
-                <h3><i class="fa-solid fa-gamepad"></i><span>Game</span></h3>
+            <div class="game-navigation-d game-navigation-community">
+                <h3><i class="fa-solid fa-people-line"></i><span class="span-game"> Community</span></h3>
             </div>
-            <div class="game-navigation-d">
-                <h3><i class="fa-solid fa-readme"></i><span>Tutorial</span></h3>
+            <div class="game-navigation-d game-navigation-game">
+                <h3><i class="fa-solid fa-gamepad"></i><span class="span-game">Game</span></h3>
             </div>
-            <div class="game-navigation-d">
-                <h3><i class="fa-solid fa-list"></i><span>Setting</span></h3>
+            <div class="game-navigation-d game-navigation-tutorials">
+                <h3><i class="fa-solid fa-readme"></i><span class="span-game">Tutorial</span></h3>
             </div>
-            <div class="game-navigation-d">
-                <h3><i class="fa-solid fa-right-to-bracket"></i><span>Log out</span></h3>
+            <div class="game-navigation-d game-navigation-setting">
+                <h3><i class="fa-solid fa-list"></i><span class="span-game">Setting</span></h3>
+            </div>
+            <div class="game-navigation-d game-navigation-logout">
+                <h3><i class="fa-solid fa-right-to-bracket"></i><span class="span-game">Log out</span></h3>
             </div>
             <div class="game-navigation-showhide">
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
         </div>
-       <div class="game-tutorials">
-        <h1>Tutorials</h1>
-        <h2>Which one do you prefer?</h2>
-        <div class="game-tutorials-choice">
-            <div class="game-tutorials-video">
-                <h2>Videos
-                    <i class="fa-solid fa-play"></i>
-                </h2>
+
+        <div class="game-dashboard">
+            <h1 class="game-dashboard-pagename">Dashboard pannel</h1>
+            <div class="dashboard-text">
+                <div class="dashboard-text-child dashboard-text-greetings">
+                    <h1>Welcome Dear User</h1>
+                    <p>Don't forget to practice often to get a consistant evolvement, as we always say "practice makes
+                        perfect"</p>
+                    <button>Play</button>
+                </div>
+                <div class="dashboard-text-child dashboard-text-quote">
+                    <h1>Quote of the day is</h1>
+                    <p>"Practise makes perfect"</p>
+                    <div class="dahboard-text-quote-like">
+                        <i class="fa-regular fa-heart fa-2xl"></i>
+                    </div>
+                </div>
+                <div class="dashboard-text-child dashboard-text-goal">
+                    <h1>Current goal</h1>
+                    <p>To write faster</p>
+                    <button>Change goal</button>
+                </div>
             </div>
-            <div class="game-tutorials-sheets">
-                <h2>Docs
-                    <i class="fa-solid fa-book"></i>
-                </h2>
+
+            <div class="game-board">
+                <h1>WELCOME TO GAME BOARD</h1>
+            </div>
+
+            <div class="dashboard-gamesummary">
+                <div class="dashboard-gamesummary-maincontent">
+                    <div class="dashboard-summary-actions">
+                        <h1>User History</h1>
+                        <div class="dashboard-summary-actions-button">
+                            <button>Erase all</button>
+                            <button>Hide all</button>
+                        </div>
+                    </div>
+                    <div class="dashboard-gamehistory-grid">
+                        <div class="dashboard-gamehistory dashboard-gamehistorylabel">
+                            <h3>Date</h3>
+                            <h3>Accuracy</h3>
+                            <h3>Speed</h3>
+                        </div>
+                        <hr>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                        <div class="dashboard-gamehistory">
+                            <h3>01/02/2026</h3>
+                            <h3>Score 3/10</h3>
+                            <h3>Time 3wp</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    <!-- <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/QAb3ATOpBpE"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-    </iframe> -->
-</div>
+
+        <div class="game-community">
+            <div class="game-community-wrapper">
+                <div class="game-community-rank">
+                    <h1>Your rank globally <i class="fa-solid fa-medal"></i></h1>
+                    <div class="game-community-rank-grid">
+                        <div class="game-community-rank-cards game-community-rank-cards-label">
+                            <h3>Rank</h3>
+                            <h3>Pseudo</h3>
+                            <h3>Speed</h3>
+                        </div>
+                        <hr>
+                        <div class="game-community-rank-cards">
+                            <h3>1</h3>
+                            <h3>userFast5</h3>
+                            <h3>150wpm</h3>
+                        </div>
+                        <div class="game-community-rank-cards">
+                            <h3>1</h3>
+                            <h3>userFast5</h3>
+                            <h3>150wpm</h3>
+                        </div>
+                        <div class="game-community-rank-cards">
+                            <h3>1</h3>
+                            <h3>userFast5</h3>
+                            <h3>150wpm</h3>
+                        </div>
+                        <div class="game-community-rank-cards">
+                            <h3>1</h3>
+                            <h3>userFast5</h3>
+                            <h3>150wpm</h3>
+                        </div>
+                        <div class="game-community-rank-cards">
+                            <h3>1</h3>
+                            <h3>userFast5</h3>
+                            <h3>150wpm</h3>
+                        </div>
+                        <div class="game-community-rank-cards">
+                            <h3>1</h3>
+                            <h3>userFast5</h3>
+                            <h3>150wpm</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-community-news">
+                    <div class="game-community-news-scroll">
+                        <h1>News</h1>
+                        <ul class="game-community-news-list">
+                            <li>
+                                <h3>Up coming competition on the 26th on June </h3>
+                            </li>
+                            <li>
+                                <h3>Up coming competition on the 26th on June </h3>
+                            </li>
+                            <li>
+                                <h3>Up coming competition on the 26th on June </h3>
+                            </li>
+                            <li>
+                                <h3>Up coming competition on the 26th on June </h3>
+                            </li>
+                            <li>
+                                <h3>Up coming competition on the 26th on June </h3>
+                            </li>
+                            <li>
+                                <h3>Up coming competition on the 26th on June </h3>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-tutorials">
+            <div class="game-tutorials-firstglance">
+                <h1>Tutorials</h1>
+                <h2>Which one do you prefer?</h2>
+                <div class="game-tutorials-choice">
+                    <div class="game-tutorials-video">
+                        <h2>Videos
+                            <i class="fa-solid fa-play"></i>
+                        </h2>
+                    </div>
+                    <div class="game-tutorials-sheets">
+                        <h2>Docs
+                            <i class="fa-solid fa-book"></i>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="game-tutorials-video-youtube">
+                <div class="game-tutorials-exit game-exit-youtube">
+                    <i class="fa-solid fa-x fa-xl"></i>
+                </div>
+                <div class="game-tutorials-video-youtube-heading">
+                    <h1>Welcome to tutorials Video</h1>
+                    <p>The main goal of this tutorials is to teach you not only write effectively, but to anticipate
+                        what you are going to write next to improve you speed</p>
+                    <a href="https://www.bing.com/ck/a?!&&p=0025d10f7d218cc9584c1c52cb2b1666cefce4962d08ca041649d563d411a633JmltdHM9MTc3ODcxNjgwMA&ptn=3&ver=2&hsh=4&fclid=32023dc8-eead-6d22-33dc-2893ef8e6cf5&psq=youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20v"
+                        target="blank">Visit YouTube</a>
+                </div>
+                <div class="game-tutorials-video-youtube-grid">
+                    <iframe width="1199" height="535" src="https://www.youtube.com/embed/QAb3ATOpBpE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <iframe width="1199" height="535"
+                        src="https://www.youtube.com/embed/2jBTKgobGWw?si=Roq5gBOOvuTO19_X" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="1199" height="535"
+                        src="https://www.youtube.com/embed/mowqYBCTH04?si=ooMpp7Gmj4t6iz14" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="game-tutorials-documentation">
+                <div class="game-tutorials-exit game-exit-documentation">
+                    <i class="fa-solid fa-x fa-xl"></i>
+                </div>
+                <div class="game-tutorials-documentation-heading">
+                    <h1>Welcome to tutorials Doc</h1>
+                    <p>The main goal of this tutorials is to teach you not only write effectively, but to anticipate
+                        what you are going to write next to improve you speed</p>
+                    <a href="https://www.bing.com/ck/a?!&&p=3af0db10f95d2c1eaed742778bcc732e75ba0bea3c73f56fb5580ec954f99356JmltdHM9MTc3ODcxNjgwMA&ptn=3&ver=2&hsh=4&fclid=32023dc8-eead-6d22-33dc-2893ef8e6cf5&psq=monkeytype&u=a1aHR0cHM6Ly9tb25rZXl0eXBlLmNvbS8"
+                        target="_blank">See Monkeytype</a>
+                </div>
+                <div class="game-tutorials-documentation-grid">
+                    <div class="game-tutorials-documentation-card">
+                        <h2>Mastering the Keyboard: A Strategic Blueprint for High-Speed Typing and Accuracy</h2>
+                        <p>
+                            In the modern digital economy, typing is the primary interface between thought and
+                            execution. It is no longer a peripheral technical skill but a fundamental pillar of
+                            high-output professional throughput. While the average individual operates at approximately
+                            40 words per minute (WPM), this speed represents a significant cognitive bottleneck. Moving
+                            beyond this baseline to 60, 80, or 100+ WPM is a strategic necessity to unlock a superior
+                            flow of ideas, allowing your mechanical execution to keep pace with the speed of your
+                            intellect.
+                            1. Foundations of Velocity: Transitioning from Average to Elite Speed
+                            Achieving elite status requires a departure from haphazard habits in favor of disciplined,
+                            ergonomic systems. To maximize your time and output, you must treat typing as a skill to be
+                            engineered rather than a task to be performed.
+                        </p>
+                        <p>
+                            1.1. Tool Selection and Baseline Assessment
+                            Before beginning your training, you must establish an accurate baseline to measure progress.
+                            Deploy a dual-platform protocol to account for variability in text difficulty and
+                            psychological pressure:
+                            10 Fast Fingers: Utilize this platform for high-repetition volume. It is specifically
+                            valuable for its error tolerance, allowing you to maintain momentum even when a mistake is
+                            made.
+                            Type Racer: Use this to simulate high-pressure, competitive environments. The gamified
+                            racing element leverages competitive psychology to push your speed beyond your comfort zone.
+                            The Protocol: Complete three races on Type Racer and three tests on 10 Fast Fingers. Average
+                            these six results to establish your current WPM baseline.
+
+                        </p>
+
+                        <p>
+                            1.2. Corrective Ergonomics: The Departure from "Gamer" Positioning
+                            Professional velocity is impossible using the "gamer" hand position (left hand on WASD). You
+                            must immediately transition to the Home Row method. Place your left-hand fingers on A S D F
+                            and your right-hand fingers on J K L ;, with your thumbs dedicated exclusively to the
+                            spacebar. Every finger must be strictly allocated to its designated section of the keyboard.
+                            The most critical mandate of this blueprint is a total ban on looking at the keyboard. This
+                            transition will initially cause a decrease in speed, but it is a non-negotiable prerequisite
+                            for developing the muscle memory required for elite performance.
+
+                        </p>
+
+                        <p>
+                            1.3. Tactical Efficiency through Shortcuts
+                            To stay above the average threshold, you must eliminate inefficient mechanical movements.
+                            The most vital tactical tool is the Control + Backspace shortcut. Instead of wasting seconds
+                            spamming the delete key for character-by-character correction, use this command to delete
+                            entire words instantly. This preserves your cognitive momentum and allows for rapid error
+                            recovery.
+                        </p>
+                        <p>
+                            1.4. Milestones of Progress
+                            Typing proficiency is segmented into clear statistical tiers. Advancing through these levels
+                            provides both measurable time savings and a psychological shift in how you process
+                            information.
+                            Speed (WPM)
+                            Statistical Significance / Title
+                            Psychological Impact
+                            40 WPM
+                            Global Average
+                            The baseline bottleneck; mechanical execution lags behind thought.
+                            80 WPM
+                            "Mega Racer" (Type Racer Milestone)
+                            The threshold for professional efficiency; significantly reduces drafting time.
+                            100+ WPM
+                            Top 1% of Typists
+                            Writing with a pen begins to feel agonizingly slow; thoughts flow without mechanical
+                            friction.
+                            140-150 WPM
+                            Elite / Professional
+                            Extreme proficiency where accuracy becomes the primary driver of further gains.
+                            Mechanical velocity, however, is a liability without the bedrock of precision. High speed
+                            with low accuracy results in diminished output quality and broken flow.
+                        </p>
+                        <p>
+                            2. The Precision Protocol: Optimizing Accuracy for Sustained Performance
+                            At elite levels (140–150 WPM), accuracy is the primary bottleneck. At these speeds, the
+                            "weight" of a single mistake compounds; it doesn't just stop the clock, it forces a
+                            mechanical reset and breaks the mental "buffer" of the words you have planned.
+                        </p>
+                        <p>
+                            2.1. The Accuracy-Speed Correlation
+                            Mistakes "weigh you down" in the long run more than a slightly slower, cleaner pace ever
+                            will. Prioritizing accuracy ensures that your typing remains faster and more fluid than
+                            handwriting. When accuracy is maintained, you enter a "flow state" where the keyboard
+                            becomes an invisible extension of your mind.
+                        </p>
+                        <p>
+                            2.2. Targeted Practice and Repetition
+                            To overcome specific mechanical hurdles, you must identify "sticky" words—complex terms that
+                            consistently disrupt your rhythm. For instance, if the word "Mountain" causes a stumble, you
+                            must isolate it. Execute targeted repetition drills, typing the word over and over until it
+                            becomes a reflexive muscle memory. These drills do not require dedicated hours; execute them
+                            in "small bursts of time"—the minutes before a lecture or during short breaks at home.
+                        </p>
+                        <p>
+                            2.3. Managing the Plateau
+                            Progression is rarely linear. It is statistically common to feel "stuck" at plateaus, such
+                            as the 90 WPM mark. These periods of stagnation are a normal part of skill acquisition.
+                            Persistence is the only solution; consistent, daily practice ensures that the breakthrough
+                            to the next tier is an eventual certainty.
+                            Accuracy is the prerequisite for advanced predictive processing; you cannot effectively look
+                            ahead to the next word if you are constantly looking back to correct the previous one.
+                        </p>
+                        <p>
+                            3. Predictive Processing: Anticipation and Fluid Key-Strikes
+                            The final stage of mastery involves shifting from reactive typing to proactive processing.
+                            By implementing a "look-ahead" strategy, you eliminate the micro-pauses that traditionally
+                            occur between words.
+
+                        </p>
+                        <p>
+                            3.1. Visual Lead-Time and Processing: The "Mountain Number" Protocol
+                            To achieve fluid speed, your eyes must remain one step ahead of your fingers. Consider the
+                            Mountain Number Example:
+                            While your fingers are physically executing the word "Mountain," your eyes must already be
+                            reading and processing the word "Number."
+                            As your fingers transition to "Number," your eyes move forward to process the next word,
+                            such as "Example."
+                            This visual lead-time creates a cognitive buffer, removing the need to pause and "think"
+                            about what to type next.
+                        </p>
+                        <p>
+                            3.2. Syllabic Chunking for Complex Vocabulary
+                            For words that are too complex for a single movement, utilize the syllabic method. Break
+                            intimidating words into rhythmic units. For example, process the word "person" as two
+                            distinct beats: "per-son." This "chunking" allows you to maintain a steady cadence on
+                            difficult vocabulary without sacrificing the rhythm of the entire session.
+                        </p>
+                        <p>
+
+                            3.3. The "One Stroke" Conceptualization
+                            At the peak of proficiency, you must stop thinking in letters and start thinking in
+                            "strokes." For a word like "person," once you have mastered the syllables, the goal is to
+                            let your fingers touch the keyboard and execute the entire sequence as one fluid, integrated
+                            motion. This treats the word as a single unit of data—a "one stroke" execution—rather than a
+                            series of six individual mechanical actions.
+                            By integrating these strategic ergonomic foundations, rigorous accuracy protocols, and
+                            advanced predictive techniques, your improvement is not a matter of chance—it is a
+                            statistical certainty. Consistent application of these principles will transform your typing
+                            from a mundane task into a high-performance engine for professional success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="game-settings">
+            <h1>
+                Settings
+            </h1>
+            <details>
+                <summary>
+                    <div class="game-settings-title">
+                        Choose themes
+                    </div>
+                    <div class="game-settings-arrowdown">
+                        <i class="fa-solid fa-caret-down fa-xl"></i>
+                    </div>
+                </summary>
+                <ul>
+                    <li>
+                        <div class="game-setting-theme-color">
+                            <p>Theme light</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="game-setting-theme-color">
+                            Theme dark
+                        </div>
+                    </li>
+                    <li>
+                        <div class="game-setting-theme-color">
+                            Theme deafult
+                        </div>
+                    </li>
+                </ul>
+            </details>
+            <details>
+                <summary>
+                    <div class="game-settings-title">
+                        Change Language
+                    </div>
+                    <div class="game-settings-arrowdown">
+                        <i class="fa-solid fa-caret-down fa-xl"></i>
+                    </div>
+                </summary>
+                <ul>
+                    <li>
+                        <div class="game-settings-language">
+                            <p>Francais</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="game-settings-language">
+                            <p>English</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="game-settings-language">
+                            <p>Malagasy</p>
+                        </div>
+                    </li>
+                </ul>
+            </details>
+            <details>
+                <summary>
+                    <div class="game-settings-title">
+                        User details
+                    </div>
+                    <div class="game-settings-arrowdown">
+                        <i class="fa-solid fa-caret-down fa-xl"></i>
+                    </div>
+                </summary>
+                <ul>
+                    <li>
+                        <div class="game-settings-username">
+                            <p>username</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="game-settings-password">
+                            <p>password</p>
+                        </div>
+                    </li>
+                </ul>
+            </details>
+        </div>
     </section>
+    <script src="interactivity/functionActivator.js" type="module"></script>
 </body>
 
 </html>

@@ -1,0 +1,43 @@
+.learn-more{
+    height:80vh;
+    width:70%;
+    border-radius: 10px;
+    background: white;
+    padding:3vh;
+    position:absolute;
+    top:0%;
+    left:15%;
+    display:none;
+    z-index: 3;
+}
+
+.learn-more-show{
+    display:block !important;
+}
+
+
+.learn-more-content{
+    display:flex;
+    flex-direction: column;
+    gap:2vh;
+    text-align:left;
+    height:100%;
+    width:100%;
+    position: relative;
+}
+
+.learn-more-exit{
+    width:2vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding:1vh;
+    background: #10288C;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top:0;
+    right:0;
+
+}

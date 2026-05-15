@@ -2,8 +2,12 @@
     width:90%;
     height:100vh;
     padding:2vh;
-    
+    display:none;
 }
+
+/* .game-community-show{
+    display:block !important;
+} */
 
 .game-community-wrapper{
     background-color:#10288C;
