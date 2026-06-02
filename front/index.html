@@ -18,16 +18,17 @@
     <link rel="stylesheet" href="component-style/game-tutorials.css">
     <link rel="stylesheet" href="component-style/game-boards.css">
     <link rel="stylesheet" href="component-style/learn-more.css">
+    <link rel="stylesheet" href="component-style/typing-game.css">
+    <link rel="stylesheet" href="component-style/auth.css">
 </head>
 
 <body>
     <main class="opening">
-        <div class="modal">
-        </div>
+        <div class="modal"></div>
         <header class="header">
             <nav>
                 <ul class="header-outerlist">
-                    <li>
+                h    <li>
                         <div class="header-mainlogo">
                             <h1>E-WRITE</h1>
                         </div>
@@ -35,6 +36,12 @@
 
                     <li>
                         <ul class="header-innerlist">
+                            <div class="header-guest">
+                                <h4>Play as guest</h4>
+                            </div>
+                            <div class="header-login">
+                                <button>Log in</button>
+                            </div>
                             <select name="" class="header-changelanguage">
                                 <option value="eng">English</option>
                                 <option value="mlg">Malagasy</option>
@@ -85,6 +92,33 @@
             </div>
         </section>
 
+        <section class="section-aboutapp">
+            <h1>What to know about E-write ? </h1>
+            <div class="aboutapp-container">
+                <div class="aboutapp-grid aboutapp-firstgrid">
+                    <div class="aboutapp-text">
+                        <p>
+                            I believe that somehow, knowledge is freedom. Like in music, you feel more free when playing an instrument when you've practiced it a thousand times. Likewise, typing skills are the same. Typing it self is a hobby many people pratice overnight. So why not learn how to type with e-write, and feel more freedom when typing.
+                        </p>
+                    </div>
+                    <div class="aboutapp-pic">
+                        <img src="img/first.jfif" alt="">
+                    </div>
+                </div>
+                <div class="aboutapp-grid aboutapp-secondgrid">
+                    <div class="aboutapp-text">
+                        <p>
+                            Practice daily and keep track of your progress to get more motivation. Repetition is key. Surely, when first learning how to write you will feel like you've slowed down. But do not worry, all we are trying to do is to build muscle memory . Afterward you will be able a lot type faster.
+à
+                        </p>
+                    </div>
+                    <div class="aboutapp-pic">
+                        <img src="img/second.jfif" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer class="footer">
             <form class="footer-feedback">
                 <h1>How did you find the app?</h1>
@@ -131,6 +165,42 @@
             </div>
         </footer>
     </main>
+
+    <section class="section-auth">
+        <form action="" class="auth-form">
+            <h1>Log in</h1>
+            <div class="auth-input-container">
+                <label for="auth-email">Insert email</label>
+                <input type="text" placeholder="email" id="auth-email">
+
+            </div>
+            <div class="auth-input-container">
+                <label for="auth-password">Insert password</label>
+                <input type="text" placeholder="password" id="auth-password">
+            </div>
+            <button>Log in</button>
+            <p>
+                do not have an account yet ?
+                <span>Sign up</span>
+            </p>
+        </form>
+        <form action="" class="auth-signingup">
+            <h1>Sign up</h1>
+            <div class="auth-input-container">
+                <label for="auth-name">Insert name</label>
+                <input type="text" placeholder="name" id="auth-name">
+            </div>
+            <div class="auth-input-container">
+                <label for="auth-signingup-email">Insert email</label>
+                <input type="text" placeholder="email" id="auth-signingup-email">
+            </div>
+            <div class="auth-input-container">
+                <label for="auth-signingup-password">Insert password</label>
+                <input type="text" placeholder="password" id="auth-sigingup-password">
+            </div>
+            <button>Sign up</button>
+        </form>
+    </section>
 
     <section class="section-game">
         <div class="game-navigation">
@@ -621,8 +691,52 @@
                 </ul>
             </details>
         </div>
+
+        <div class="section-typing">
+            <div class="section-typing-container">
+                <div class="typing-modal">
+                    <div class="typing-actions-resume">
+                        <button class="typing-actions-button2"> <i class="fa-solid fa-play fa-xl"></i>Resume</button>
+                    </div>
+                </div>
+                <div class="typing-levels">
+                    <h1>Typing Test</h1>
+                    <div class="typing-levels-select">
+                        <label for="mode">Select Mode :</label>
+                        <select id="mode">
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="typing-input">
+                    <div class="typing-input-container">
+                        <p id="word-display"></p>
+                    </div>
+                    <input type="text" id="input-field" autofocus>
+                    <p id="results">Results : </p>
+                    <div class="typing-actions">
+                        <button class="typing-actions-button1"><i class="fa-solid fa-pause fa-xl"></i> Pause</button>
+                    </div>
+                </div>
+
+                <div class="typing-startgame">
+                    <button>Start Game</button>
+                </div>
+
+                <div class="typing-stats">
+                    <h1>Statistics</h1>
+                    <p>WPM : 10 , RANK 1009</p>
+                </div>
+            </div>
+
+        </div>
     </section>
+
     <script src="interactivity/functionActivator.js" type="module"></script>
+    <script src="interactivity/script.js"></script>
 </body>
 
 </html>

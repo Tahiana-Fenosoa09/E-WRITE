@@ -35,13 +35,13 @@ nav ul li{
 }
 
 .header-innerlist{
-    gap:4vw;
+    gap:2vw;
     align-items: center;
 }
 
 .header-changelanguage{
     height:5vh;
-    padding:0 4vw;
+    padding:0 2vw;
     border-radius: 5px;
     border:2px solid #10288C;
     background: #EAF6AD;
@@ -62,4 +62,27 @@ nav ul li{
     justify-content: center;
     align-items: center;
     color:white;
+}
+
+.header-guest{
+    padding:1vh 2vw;
+    border-radius: 10px;
+    border:none;
+    font-size:2.5vh;
+    font-weight:600;
+    border:2px solid #10288C;
+    background: var(--pjBlue);
+    color:var(--white);
+}
+
+.header-login button{
+    padding:1vh 2vw;
+    border-radius: 10px;
+    border:none;
+    font-size:2.5vh;
+    font-weight:600;
+    border:2px solid #10288C;
+    background: var(--pjBlue);
+    color:var(--white);
+
 }

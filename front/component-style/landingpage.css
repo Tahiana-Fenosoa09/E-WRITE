@@ -57,3 +57,68 @@
     background: #10288C;
     color:#EAF6AD;
 }
+
+.section-aboutapp{
+    background: white;
+    height:auto;
+    width:100%;
+    padding:5vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5vh;
+}
+
+.section-aboutapp h1{
+    font-size:5vh;
+}
+
+.aboutapp-container{
+    padding:3vh;
+    display:flex;
+    flex-direction: column;
+    gap:3vh;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width:100%;
+    border-radius: 10px;
+    background: #EAF6AD;
+}
+
+.aboutapp-grid{
+    display:flex;
+    gap:5vw;
+    width:100%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutapp-secondgrid{
+    flex-direction: row-reverse;
+}
+
+.aboutapp-text{
+    max-width: 50%;
+}
+
+.aboutapp-text p{
+    line-height: 5vh;
+    font-size:3vh
+}
+
+.aboutapp-pic{
+    width:50%;
+    height:50vh;
+    border-radius: 10px;
+    box-shadow:1px 1px 10px grey;
+}
+
+.aboutapp-pic img{
+    border-radius: 10px;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}

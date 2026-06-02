@@ -9,7 +9,7 @@ export default function navigation(){
 
     const getGameDashBoard = document.querySelector(".game-dashboard");
     const getCommunity = document.querySelector(".game-community");
-    const getGame = document.querySelector(".game-board");
+    const getGame = document.querySelector(".section-typing");
     const getTutorials = document.querySelector(".game-tutorials");
     const getSettings = document.querySelector(".game-settings")
 
@@ -18,15 +18,17 @@ export default function navigation(){
     let currentPageLocation;
 
     function openGame(){
-        const getBeginButton = document.querySelector(".actions-createaccount");
+        const getBeginButton = document.querySelector(".header-guest");
         const getOpeningPage = document.querySelector(".opening");
         const getGameSection = document.querySelector(".section-game");
+        const getMainLogo = document.querySelector(".game-mainlogo");
         
         getBeginButton.addEventListener("click", () => {
             currentPageLocation = allPages[0];
             getOpeningPage.classList.add("main-hide");
             getGameSection.classList.add("section-game-show");
-            getGameDashBoard.style.display = "flex"
+            getMainLogo.classList.add("game-mainlogo-hide");
+            getGameDashBoard.style.display = "flex";
         });
     }
 
@@ -55,7 +57,7 @@ export default function navigation(){
         if( currentPageLocation != allPages[2]){
             const previousPage = currentPageLocation;
             currentPageLocation = allPages[2];
-            navigateBetweenPages(previousPage,dashBoardButton);
+            navigateBetweenPages(previousPage,getGame);
 
         }
     });

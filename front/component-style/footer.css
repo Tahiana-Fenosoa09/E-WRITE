@@ -7,8 +7,8 @@
     gap:5vh;
     justify-content: center;
     align-items: center;
-    background: #10288C;
-    color:#EAF6AD;
+    background:var(--pjBlue);
+    color:var(--pjBeige);
 }
 
 .footer-feedback{
@@ -23,8 +23,8 @@
     padding:1vh;
     border: none;
     border-radius: 10px;
-    background: #EAF6AD;
-    color:#10288C;
+    background:var(--pjBeige);
+    color:var(--pjBlue);
     font-weight: 600;
     font-size: 2vh;
 }
@@ -48,7 +48,7 @@
 
 .footer-logo{
     font-size:6vh;
-    color: #EAF6AD;
+    color:var(--pjBeige);
     letter-spacing: 1vw;
 }
 

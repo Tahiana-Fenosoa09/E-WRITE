@@ -185,11 +185,28 @@
     color:#EAF6AD;
     letter-spacing: 1vw;
     white-space: nowrap;
+    opacity: 1;
+    animation:showUP 5s linear;
+}
+
+@keyframes showUP {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .game-mainlogo-hide{
-    display:none !important;
+    
+    opacity:0 !important;
 }
+
+
 
 .game-mainlogo h1{
     font-family: "Angkor";
