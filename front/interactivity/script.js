@@ -1,12 +1,12 @@
-/**
- * Point culture (en Français car je suis un peu obligé): 
- * Dans ce genre de jeu, un mot equivaut a 5 caractères, y compris les espaces. 
- * La precision, c'est le pourcentage de caractères tapées correctement sur toutes les caractères tapées.
- * 
- * Sur ce... Amusez-vous bien ! 
- */
-let startTime = null, previousEndTime = null;
+let timer = null;
+let timeLeft = 60;
+let isPaused = false;
+let testStarted = false;
+
+let correctChars = 0;
+let typedChars = 0;
 let currentWordIndex = 0;
+
 const wordsToType = [];
 
 const modeSelect = document.getElementById("mode");
@@ -14,93 +14,202 @@ const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
 
+const startButton = document.getElementById("start-btn");
+const playAgainButton = document.getElementById("play-again");
+
+const pauseButton =
+    document.querySelector(".typing-actions-button1");
+
+const resumeButton =
+    document.querySelector(".typing-actions-button2");
+
+const typingModal =
+    document.querySelector(".typing-modal");
+
+const finalWpm =
+    document.getElementById("final-wpm");
+
+const finalAccuracy =
+    document.getElementById("final-accuracy");
+
+const finalMessage =
+    document.getElementById("final-message");
+
+const typingStats =
+    document.querySelector(".typing-stats");
+
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
     medium: ["keyboard", "monitor", "printer", "charger", "battery"],
     hard: ["synchronize", "complicated", "development", "extravagant", "misconception"]
 };
 
-// Generate a random word from the selected mode
-const getRandomWord = (mode) => {
-    const wordList = words[mode];
-    return wordList[Math.floor(Math.random() * wordList.length)];
-};
+function getRandomWord(mode) {
+    const list = words[mode];
+    return list[Math.floor(Math.random() * list.length)];
+}
 
-// Initialize the typing test
-const startTest = (wordCount = 50) => {
-    wordsToType.length = 0; // Clear previous words
-    wordDisplay.innerHTML = ""; // Clear display
-    currentWordIndex = 0;
-    startTime = null;
-    previousEndTime = null;
+function generateWords() {
+    wordsToType.length = 0;
+    wordDisplay.innerHTML = "";
 
-    for (let i = 0; i < wordCount; i++) {
+    for (let i = 0; i < 150; i++) {
         wordsToType.push(getRandomWord(modeSelect.value));
     }
 
     wordsToType.forEach((word, index) => {
         const span = document.createElement("span");
         span.textContent = word + " ";
-        if (index === 0) span.style.color = "#10288C"; // Highlight first word
+
+        if (index === 0) {
+            span.style.color = "#10288C";
+        }
+
         wordDisplay.appendChild(span);
     });
+}
 
+function startGame() {
+    clearInterval(timer);
+
+    testStarted = false;
+    timeLeft = 60;
+    isPaused = false;
+
+    correctChars = 0;
+    typedChars = 0;
+    currentWordIndex = 0;
+
+    results.textContent = `Time Left : ${timeLeft}s`;
+
+    inputField.disabled = false;
     inputField.value = "";
-    results.textContent = "";
-};
 
-// Start the timer when user begins typing
-const startTimer = () => {
-    if (!startTime) startTime = Date.now();
-};
+    finalWpm.textContent = "-";
+    finalAccuracy.textContent = "-";
+    finalMessage.textContent = "Typing...";
 
-// Calculate and return WPM & accuracy
-const getCurrentStats = () => {
-    const elapsedTime = (Date.now() - previousEndTime) / 1000; // Seconds
-    const wpm = (wordsToType[currentWordIndex].length / 5) / (elapsedTime / 60); // 5 chars = 1 word
-    const accuracy = (wordsToType[currentWordIndex].length / inputField.value.length) * 100;
+    typingStats.style.display = "none"; // hide stats at start
 
-    return { wpm: wpm.toFixed(2), accuracy: accuracy.toFixed(2) };
-};
+    generateWords();
+}
 
-// Move to the next word and update stats only on spacebar press
-const updateWord = (event) => {
-    if (event.key === " ") { // Check if spacebar is pressed
-        if (inputField.value.trim() === wordsToType[currentWordIndex]) {
-            if (!previousEndTime) previousEndTime = startTime;
+function startTimer() {
+    if (testStarted) return;
 
-            const { wpm, accuracy } = getCurrentStats();
-            results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
+    testStarted = true;
 
-            currentWordIndex++;
-            previousEndTime = Date.now();
-            highlightNextWord();
+    timer = setInterval(() => {
 
-            // inputField.value = ""; // Clear input field after space
-            event.preventDefault(); // Prevent adding extra spaces
+        if (isPaused) return;
+
+        timeLeft--;
+
+        results.textContent = `Time Left : ${timeLeft}s`;
+
+        // ✅ THIS is where finishGame MUST be called
+        if (timeLeft <= 0) {
+            finishGame();
         }
+
+    }, 1000);
+}
+
+function finishGame() {
+    clearInterval(timer);
+
+    inputField.disabled = true;
+
+    const accuracy =
+        typedChars === 0
+            ? 0
+            : ((correctChars / typedChars) * 100).toFixed(2);
+
+    const wpm =
+        ((correctChars / 5)).toFixed(2);
+
+    finalWpm.textContent = `${wpm} WPM`;
+    finalAccuracy.textContent = `${accuracy}%`;
+
+    if (wpm < 20) {
+        finalMessage.textContent = "Keep Practicing";
     }
-};
-
-// Highlight the current word in red
-const highlightNextWord = () => {
-    const wordElements = wordDisplay.children;
-
-    if (currentWordIndex < wordElements.length) {
-        if (currentWordIndex > 0) {
-            wordElements[currentWordIndex - 1].style.color = "black";
-        }
-        wordElements[currentWordIndex].style.color = "#10288C";
+    else if (wpm < 40) {
+        finalMessage.textContent = "Good Job";
     }
-};
+    else {
+        finalMessage.textContent = "Excellent";
+    }
 
-// Event listeners
-// Attach `updateWord` to `keydown` instead of `input`
+    // ✅ SHOW RESULTS SCREEN (IMPORTANT)
+    typingStats.style.display = "block";
+}
+
+function highlightCurrentWord() {
+    const spans = wordDisplay.children;
+
+    for (let span of spans) {
+        span.style.color = "black";
+    }
+
+    if (spans[currentWordIndex]) {
+        spans[currentWordIndex].style.color = "#10288C";
+    }
+}
+
 inputField.addEventListener("keydown", (event) => {
-    startTimer();
-    updateWord(event);
-});
-modeSelect.addEventListener("change", () => startTest());
 
-// Start the test
-startTest();
+    startTimer();
+
+    if (event.key === " ") {
+
+        const typedWord = inputField.value.trim();
+        const targetWord = wordsToType[currentWordIndex];
+
+        typedChars += typedWord.length;
+
+        for (
+            let i = 0;
+            i < Math.min(typedWord.length, targetWord.length);
+            i++
+        ) {
+            if (typedWord[i] === targetWord[i]) {
+                correctChars++;
+            }
+        }
+
+        currentWordIndex++;
+
+        highlightCurrentWord();
+
+        inputField.value = "";
+
+        event.preventDefault();
+    }
+});
+
+pauseButton.addEventListener("click", () => {
+    isPaused = true;
+    typingModal.classList.add("typing-modal-show");
+});
+
+resumeButton.addEventListener("click", () => {
+    isPaused = false;
+    typingModal.classList.remove("typing-modal-show");
+});
+
+startButton.addEventListener("click", () => {
+
+    document.querySelector(".typing-input")
+        .classList.add("typing-input-show");
+
+    document.querySelector(".typing-startgame")
+        .classList.add("typing-startgame-hide");
+
+    startGame();
+    inputField.focus();
+});
+
+playAgainButton.addEventListener("click", startGame);
+
+modeSelect.addEventListener("change", startGame);

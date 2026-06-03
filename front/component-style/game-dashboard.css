@@ -1,5 +1,5 @@
 .game-dashboard{
-    width:90%;
+    width:100%;
     height:100%;
     padding:2vh;
     display: none;
@@ -121,4 +121,8 @@
 
 .dashboard-gamehistorylabel{
     color:#10288C;
+}
+
+.game-logo-responsive-i{
+    display: none;
 }

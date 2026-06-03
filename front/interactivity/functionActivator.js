@@ -4,6 +4,7 @@ import slideNavBar from "./slideNavigationBar.js";
 import tutorials from "./tutorials.js";
 import startGame from "./typinginteractivity.js";
 import makeAuthSystem from "./auth.js";
+import responsiveHeader from "./responsive-header.js";
 
 function functionActivator(){
     navigation();
@@ -12,6 +13,7 @@ function functionActivator(){
     tutorials();
     startGame();
     makeAuthSystem();
+    responsiveHeader();
 }
 
 functionActivator();

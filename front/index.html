@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="component-style/learn-more.css">
     <link rel="stylesheet" href="component-style/typing-game.css">
     <link rel="stylesheet" href="component-style/auth.css">
+    <link rel="stylesheet" href="component-style/responsive.css">
 </head>
 
 <body>
@@ -28,21 +29,24 @@
         <header class="header">
             <nav>
                 <ul class="header-outerlist">
-                h    <li>
+                    <li class="header-logo-responsive">
                         <div class="header-mainlogo">
                             <h1>E-WRITE</h1>
+                        </div>
+                        <div class="header-logo-responsive-i">
+                            <i class="fa-solid fa-layer-group fa-2xl"></i>
                         </div>
                     </li>
 
                     <li>
                         <ul class="header-innerlist">
-                            <div class="header-guest">
-                                <h4>Play as guest</h4>
+                            <div class="header-innerlist-content header-guest">
+                                <h4>Guest</h4>
                             </div>
-                            <div class="header-login">
+                            <div class="header-innerlist-content header-login">
                                 <button>Log in</button>
                             </div>
-                            <select name="" class="header-changelanguage">
+                            <select name="" class="header-innerlist-content header-changelanguage">
                                 <option value="eng">English</option>
                                 <option value="mlg">Malagasy</option>
                                 <option value="frc">Francais</option>
@@ -90,6 +94,14 @@
                     <h1>LEARN MORE</h1>
                 </div>
             </div>
+            <div class="landingpage-imagesdecoration">
+                <div class="landingpage-img landingpage-img1">
+                    <img src="img/right.png" alt="">
+                </div>
+                <div class="landingpage-img landingpage-img2">
+                    <img src="img/left.png" alt="">
+                </div>
+            </div>
         </section>
 
         <section class="section-aboutapp">
@@ -97,8 +109,12 @@
             <div class="aboutapp-container">
                 <div class="aboutapp-grid aboutapp-firstgrid">
                     <div class="aboutapp-text">
+                        <h2>The beauty of typing fast</h2>
                         <p>
-                            I believe that somehow, knowledge is freedom. Like in music, you feel more free when playing an instrument when you've practiced it a thousand times. Likewise, typing skills are the same. Typing it self is a hobby many people pratice overnight. So why not learn how to type with e-write, and feel more freedom when typing.
+                            I believe that somehow, knowledge is freedom. Like in music, you feel more free when playing
+                            an instrument when you've practiced it a thousand times. Likewise, typing skills are the
+                            same. Typing it self is a hobby many people pratice overnight. So why not learn how to type
+                            with e-write, and feel more freedom when typing.
                         </p>
                     </div>
                     <div class="aboutapp-pic">
@@ -107,9 +123,12 @@
                 </div>
                 <div class="aboutapp-grid aboutapp-secondgrid">
                     <div class="aboutapp-text">
+                        <h2>How to practice ? </h2>
                         <p>
-                            Practice daily and keep track of your progress to get more motivation. Repetition is key. Surely, when first learning how to write you will feel like you've slowed down. But do not worry, all we are trying to do is to build muscle memory . Afterward you will be able a lot type faster.
-à
+                            Practice daily and keep track of your progress to get more motivation. Repetition is key.
+                            Surely, when first learning how to write you will feel like you've slowed down. But do not
+                            worry, all we are trying to do is to build muscle memory . Afterward you will be able a lot
+                            type faster.
                         </p>
                     </div>
                     <div class="aboutapp-pic">
@@ -216,14 +235,30 @@
             <div class="game-navigation-d game-navigation-game">
                 <h3><i class="fa-solid fa-gamepad"></i><span class="span-game">Game</span></h3>
             </div>
-            <div class="game-navigation-d game-navigation-tutorials">
-                <h3><i class="fa-solid fa-readme"></i><span class="span-game">Tutorial</span></h3>
+            <div class="game-navigation-nonresponsive">
+                <div class="game-navigation-d game-navigation-tutorials">
+                    <h3><i class="fa-solid fa-readme"></i><span class="span-game">Tutorial</span></h3>
+                </div>
+                <div class="game-navigation-d game-navigation-setting">
+                    <h3><i class="fa-solid fa-list"></i><span class="span-game">Setting</span></h3>
+                </div>
+                <div class="game-navigation-d game-navigation-logout">
+                    <h3><i class="fa-solid fa-right-to-bracket"></i><span class="span-game">Log out</span></h3>
+                </div>
             </div>
-            <div class="game-navigation-d game-navigation-setting">
-                <h3><i class="fa-solid fa-list"></i><span class="span-game">Setting</span></h3>
-            </div>
-            <div class="game-navigation-d game-navigation-logout">
-                <h3><i class="fa-solid fa-right-to-bracket"></i><span class="span-game">Log out</span></h3>
+            <!-- <div class="game-navigation-responsive">
+                <div class="game-navigation-d game-navigation-tutorials">
+                    <h3><i class="fa-solid fa-readme"></i><span class="span-game">Tutorial</span></h3>
+                </div>
+                <div class="game-navigation-d game-navigation-setting">
+                    <h3><i class="fa-solid fa-list"></i><span class="span-game">Setting</span></h3>
+                </div>
+                <div class="game-navigation-d game-navigation-logout">
+                    <h3><i class="fa-solid fa-right-to-bracket"></i><span class="span-game">Log out</span></h3>
+                </div>
+            </div> -->
+            <div class="game-logo-responsive-i">
+                <i class="fa-solid fa-layer-group"></i>
             </div>
             <div class="game-navigation-showhide">
                 <i class="fa-solid fa-arrow-right"></i>
@@ -288,46 +323,6 @@
                             <h3>Score 3/10</h3>
                             <h3>Time 3wp</h3>
                         </div>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -349,52 +344,12 @@
                             <h3>userFast5</h3>
                             <h3>150wpm</h3>
                         </div>
-                        <div class="game-community-rank-cards">
-                            <h3>1</h3>
-                            <h3>userFast5</h3>
-                            <h3>150wpm</h3>
-                        </div>
-                        <div class="game-community-rank-cards">
-                            <h3>1</h3>
-                            <h3>userFast5</h3>
-                            <h3>150wpm</h3>
-                        </div>
-                        <div class="game-community-rank-cards">
-                            <h3>1</h3>
-                            <h3>userFast5</h3>
-                            <h3>150wpm</h3>
-                        </div>
-                        <div class="game-community-rank-cards">
-                            <h3>1</h3>
-                            <h3>userFast5</h3>
-                            <h3>150wpm</h3>
-                        </div>
-                        <div class="game-community-rank-cards">
-                            <h3>1</h3>
-                            <h3>userFast5</h3>
-                            <h3>150wpm</h3>
-                        </div>
                     </div>
                 </div>
                 <div class="game-community-news">
                     <div class="game-community-news-scroll">
                         <h1>News</h1>
                         <ul class="game-community-news-list">
-                            <li>
-                                <h3>Up coming competition on the 26th on June </h3>
-                            </li>
-                            <li>
-                                <h3>Up coming competition on the 26th on June </h3>
-                            </li>
-                            <li>
-                                <h3>Up coming competition on the 26th on June </h3>
-                            </li>
-                            <li>
-                                <h3>Up coming competition on the 26th on June </h3>
-                            </li>
-                            <li>
-                                <h3>Up coming competition on the 26th on June </h3>
-                            </li>
                             <li>
                                 <h3>Up coming competition on the 26th on June </h3>
                             </li>
@@ -446,6 +401,21 @@
                     <iframe width="1199" height="535"
                         src="https://www.youtube.com/embed/mowqYBCTH04?si=ooMpp7Gmj4t6iz14" title="YouTube video player"
                         frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="game-tutorials-video-youtube-grid-responsive">
+                    <iframe width="350" height="300" src="https://www.youtube.com/embed/QAb3ATOpBpE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <iframe width="350" height="300" src="https://www.youtube.com/embed/2jBTKgobGWw?si=Roq5gBOOvuTO19_X"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="350" height="300" src="https://www.youtube.com/embed/mowqYBCTH04?si=ooMpp7Gmj4t6iz14"
+                        title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
@@ -726,12 +696,27 @@
                     <button>Start Game</button>
                 </div>
 
-                <div class="typing-stats">
-                    <h1>Statistics</h1>
-                    <p>WPM : 10 , RANK 1009</p>
+            <div class="typing-stats">
+                <h1 class="typing-stats-advice">Don't give up !</h1>
+                <div class="typing-stats-result">
+                    <div class="dashboard-text-child dashboard-text-greetings">
+                        <h1>SPEED </h1>
+                        <h3>1000000000000000wpm</h3>
+                    </div>
+                    <div class="dashboard-text-child dashboard-text-quote">
+                        <h1>ACCURACY</h1>
+                        <h3>100%</h3>
+                    </div>
+                    <div class="dashboard-text-child dashboard-text-goal">
+                        <h1>RESUME</h1>
+                        <h3>YOU PLAYED GOOD</h3>
+                    </div>
+                </div>
+                <div class="typing-stats-actions">
+                    <button>Play again</button>
+                    <button>Go to dashboard</button>
                 </div>
             </div>
-
         </div>
     </section>
 

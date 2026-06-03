@@ -115,6 +115,10 @@
     gap:10vh;
 }
 
+.game-tutorials-video-youtube-grid-responsive{
+    display:none;
+}
+
 .game-tutorials-documentation{
     width:100%;
     height:100vh;

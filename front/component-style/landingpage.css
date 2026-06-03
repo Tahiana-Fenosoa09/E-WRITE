@@ -18,12 +18,12 @@
 }
 
 .landingpage-mainactions h1{
-    color:#10288C;
     font-family: "Angkor";
+    color: var(--pjBlue);
 }
 
 .landingpage-mainactions i{
-    color:#10288C;
+    color:var(--pjBlue);
 }
 
 .landingpage-mainactions p{
@@ -45,21 +45,55 @@
     border:none;
     font-size:2.5vh;
     font-weight:600;
-    border:2px solid #10288C;
+    border:2px solid var(--pjBlue);
+}
+
+.landingpage-img{
+    height:20vw;
+    position: absolute;
+}
+
+.landingpage-img img{
+    width:100%;
+    height:100%;
+}
+
+.landingpage-img1{
+    width:15vw;
+    right:7%;
+    top:5%;
+}
+
+.landingpage-img2{
+    width:20vw;
+    left:7%;
+    bottom:5%;
 }
 
 .actions-createaccount{
-    background:#EAF6AD;
-    color:#10288C;
+    background:var(--pjBeige);
+    color:var(--pjBlue);
+    transition:background 1s linear;
+}
+
+.actions-createaccount:hover{
+    background:var(--pjBlue);
+    color: var(--pjBeige);
 }
 
 .actions-learnmore{
-    background: #10288C;
-    color:#EAF6AD;
+    background:var(--pjBlue);
+    color:var(--pjBeige);
+    transition:background 1s linear;
+}
+
+.actions-learnmore:hover{
+    background:var(--pjBeige);
+    color: var(--pjBlue);
 }
 
 .section-aboutapp{
-    background: white;
+    background: var(--white);
     height:auto;
     width:100%;
     padding:5vh;
@@ -67,7 +101,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:5vh;
+    gap:7vh;
 }
 
 .section-aboutapp h1{
@@ -84,7 +118,7 @@
     height:100%;
     width:100%;
     border-radius: 10px;
-    background: #EAF6AD;
+    background: var(--pjBeige);
 }
 
 .aboutapp-grid{
@@ -102,6 +136,16 @@
 
 .aboutapp-text{
     max-width: 50%;
+    display:flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutapp-text h2{
+    font-size:4vh;
+    color:var(--pjBlue);
 }
 
 .aboutapp-text p{
@@ -122,3 +166,4 @@
     height:100%;
     object-fit: cover;
 }
+
