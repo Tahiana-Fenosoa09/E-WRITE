@@ -17,26 +17,19 @@ const results = document.getElementById("results");
 const startButton = document.getElementById("start-btn");
 const playAgainButton = document.getElementById("play-again");
 
-const pauseButton =
-    document.querySelector(".typing-actions-button1");
+const pauseButton = document.querySelector(".typing-actions-button1");
+const resumeButton = document.querySelector(".typing-actions-button2");
+const stopButton = document.querySelector(".typing-actions-button-stop");
 
-const resumeButton =
-    document.querySelector(".typing-actions-button2");
+const typingModal = document.querySelector(".typing-modal");
 
-const typingModal =
-    document.querySelector(".typing-modal");
+const finalWpm = document.getElementById("final-wpm");
+const finalAccuracy = document.getElementById("final-accuracy");
+const finalMessage = document.getElementById("final-message");
 
-const finalWpm =
-    document.getElementById("final-wpm");
+const typingStats = document.querySelector(".typing-stats");
 
-const finalAccuracy =
-    document.getElementById("final-accuracy");
-
-const finalMessage =
-    document.getElementById("final-message");
-
-const typingStats =
-    document.querySelector(".typing-stats");
+const timeSelect = document.getElementById("time-mode");
 
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
@@ -73,8 +66,9 @@ function startGame() {
     clearInterval(timer);
 
     testStarted = false;
-    timeLeft = 60;
     isPaused = false;
+
+    timeLeft = parseInt(timeSelect.value || 60);
 
     correctChars = 0;
     typedChars = 0;
@@ -83,13 +77,17 @@ function startGame() {
     results.textContent = `Time Left : ${timeLeft}s`;
 
     inputField.disabled = false;
+    inputField.focus();
     inputField.value = "";
 
     finalWpm.textContent = "-";
     finalAccuracy.textContent = "-";
     finalMessage.textContent = "Typing...";
 
-    typingStats.style.display = "none"; // hide stats at start
+    typingStats.style.display = "none";
+
+    document.querySelector(".typing-input").classList.add("typing-input-show");
+    document.querySelector(".typing-startgame").classList.add("typing-startgame-hide");
 
     generateWords();
 }
@@ -100,18 +98,14 @@ function startTimer() {
     testStarted = true;
 
     timer = setInterval(() => {
-
         if (isPaused) return;
 
         timeLeft--;
-
         results.textContent = `Time Left : ${timeLeft}s`;
 
-        // ✅ THIS is where finishGame MUST be called
         if (timeLeft <= 0) {
             finishGame();
         }
-
     }, 1000);
 }
 
@@ -141,8 +135,84 @@ function finishGame() {
         finalMessage.textContent = "Excellent";
     }
 
-    // ✅ SHOW RESULTS SCREEN (IMPORTANT)
-    typingStats.style.display = "block";
+    document.querySelector(".typing-input")
+        .classList.remove("typing-input-show");
+
+    typingStats.classList.add("typing-stats-show");
+
+    lastResult = {
+        speed: wpm,
+        accuracy: accuracy
+    };
+}
+
+function getData(wpm,accuracy){
+    return {
+        speed : wpm,
+        yourAccurary : accuracy
+    }
+}
+
+function playGuest() {
+
+    document.querySelector("#save-session")
+        .addEventListener("click", () => {
+
+            if (!lastResult) return;
+
+            const today = new Date();
+
+            const formattedDate =
+                today.toLocaleDateString();
+
+            const session = {
+                date: formattedDate,
+                speed: lastResult.speed,
+                accuracy: lastResult.accuracy
+            };
+
+            
+            userSession.push(session);
+            
+            addNewSessionCard(session);
+            stopGame();
+        });
+}
+
+playGuest();
+
+let userSession = [];
+let lastResult = null;
+
+function createSessionCard(date, accuracy, speed) {
+    const container = document.createElement("div");
+    const dateContainer = document.createElement("h3");
+    const scoreContainer = document.createElement("h3");
+    const wordContainer = document.createElement("h3");
+
+    container.className = "dashboard-gamehistory";
+
+    dateContainer.textContent = date;
+    scoreContainer.textContent = `Accuracy : ${accuracy}%`;
+    wordContainer.textContent = `Speed : ${speed} WPM`;
+
+    container.appendChild(dateContainer);
+    container.appendChild(scoreContainer);
+    container.appendChild(wordContainer);
+
+    return container;
+}
+
+function addNewSessionCard(session) {
+    const grid = document.querySelector(".dashboard-gamehistory-grid");
+
+    const card = createSessionCard(
+        session.date,
+        session.accuracy,
+        session.speed
+    );
+
+    grid.appendChild(card);
 }
 
 function highlightCurrentWord() {
@@ -155,7 +225,32 @@ function highlightCurrentWord() {
     if (spans[currentWordIndex]) {
         spans[currentWordIndex].style.color = "#10288C";
     }
+
 }
+
+inputField.addEventListener("input", () => {
+    const spans = wordDisplay.children;
+    const typed = inputField.value;
+    const currentWord = wordsToType[currentWordIndex];
+
+    if (!spans[currentWordIndex]) return;
+
+    let wordHTML = "";
+
+    for (let i = 0; i < currentWord.length; i++) {
+        if (i < typed.length) {
+            if (typed[i] === currentWord[i]) {
+                wordHTML += `<span class="correct-letter">${currentWord[i]}</span>`;
+            } else {
+                wordHTML += `<span class="wrong-letter">${currentWord[i]}</span>`;
+            }
+        } else {
+            wordHTML += currentWord[i];
+        }
+    }
+
+    spans[currentWordIndex].innerHTML = wordHTML + " ";
+});
 
 inputField.addEventListener("keydown", (event) => {
 
@@ -196,10 +291,34 @@ pauseButton.addEventListener("click", () => {
 resumeButton.addEventListener("click", () => {
     isPaused = false;
     typingModal.classList.remove("typing-modal-show");
+    inputField.focus();
 });
 
-startButton.addEventListener("click", () => {
+function stopGame() {
+    clearInterval(timer);
 
+    testStarted = false;
+    isPaused = false;
+
+    timeLeft = parseInt(timeSelect.value || 60);
+    correctChars = 0;
+    typedChars = 0;
+    currentWordIndex = 0;
+
+    inputField.value = "";
+    
+    // inputField.disabled = true;
+
+    typingStats.classList.remove("typing-stats-show");
+    document.querySelector(".typing-input").classList.remove("typing-input-show");
+    document.querySelector(".typing-startgame").classList.remove("typing-startgame-hide");
+
+    results.textContent = `Time Left : ${timeLeft}s`;
+}
+
+stopButton.addEventListener("click", stopGame);
+
+startButton.addEventListener("click", () => {
     document.querySelector(".typing-input")
         .classList.add("typing-input-show");
 
@@ -210,6 +329,9 @@ startButton.addEventListener("click", () => {
     inputField.focus();
 });
 
-playAgainButton.addEventListener("click", startGame);
+window.addEventListener("keydown", () => {
+    inputField.focus();
+});
 
+playAgainButton.addEventListener("click", startGame);
 modeSelect.addEventListener("change", startGame);

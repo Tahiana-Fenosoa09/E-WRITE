@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="component-style/typing-game.css">
     <link rel="stylesheet" href="component-style/auth.css">
     <link rel="stylesheet" href="component-style/responsive.css">
+    <link rel="stylesheet" href="component-style/rederecting.css">
 </head>
 
 <body>
@@ -197,7 +198,7 @@
                 <label for="auth-password">Insert password</label>
                 <input type="text" placeholder="password" id="auth-password">
             </div>
-            <button>Log in</button>
+            <button id="login">Log in</button>
             <p>
                 do not have an account yet ?
                 <span>Sign up</span>
@@ -217,8 +218,15 @@
                 <label for="auth-signingup-password">Insert password</label>
                 <input type="text" placeholder="password" id="auth-sigingup-password">
             </div>
-            <button>Sign up</button>
+            <button id="signup">Sign up</button>
         </form>
+        <div class="section-redirecting">
+            <img src="img/error.jfif" alt="">
+            <h1>OOPS ! FUNCTIONALITY NOT IMPLEMENTED YET </h1>
+            <div class="redirecting-guest">
+                <h4>Back Home</h4>
+            </div>
+        </div>
     </section>
 
     <section class="section-game">
@@ -246,17 +254,6 @@
                     <h3><i class="fa-solid fa-right-to-bracket"></i><span class="span-game">Log out</span></h3>
                 </div>
             </div>
-            <!-- <div class="game-navigation-responsive">
-                <div class="game-navigation-d game-navigation-tutorials">
-                    <h3><i class="fa-solid fa-readme"></i><span class="span-game">Tutorial</span></h3>
-                </div>
-                <div class="game-navigation-d game-navigation-setting">
-                    <h3><i class="fa-solid fa-list"></i><span class="span-game">Setting</span></h3>
-                </div>
-                <div class="game-navigation-d game-navigation-logout">
-                    <h3><i class="fa-solid fa-right-to-bracket"></i><span class="span-game">Log out</span></h3>
-                </div>
-            </div> -->
             <div class="game-logo-responsive-i">
                 <i class="fa-solid fa-layer-group"></i>
             </div>
@@ -308,21 +305,6 @@
                             <h3>Speed</h3>
                         </div>
                         <hr>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
-                        <div class="dashboard-gamehistory">
-                            <h3>01/02/2026</h3>
-                            <h3>Score 3/10</h3>
-                            <h3>Time 3wp</h3>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -662,17 +644,24 @@
             </details>
         </div>
 
+
         <div class="section-typing">
             <div class="section-typing-container">
+
                 <div class="typing-modal">
                     <div class="typing-actions-resume">
-                        <button class="typing-actions-button2"> <i class="fa-solid fa-play fa-xl"></i>Resume</button>
+                        <button class="typing-actions-button2">
+                            Resume
+                        </button>
                     </div>
                 </div>
+
                 <div class="typing-levels">
                     <h1>Typing Test</h1>
+
                     <div class="typing-levels-select">
                         <label for="mode">Select Mode :</label>
+
                         <select id="mode">
                             <option value="easy">Easy</option>
                             <option value="medium">Medium</option>
@@ -682,40 +671,80 @@
                 </div>
 
                 <div class="typing-input">
+
+                    <p id="results">
+                        Time Left : 60s
+                    </p>
                     <div class="typing-input-container">
                         <p id="word-display"></p>
                     </div>
-                    <input type="text" id="input-field" autofocus>
-                    <p id="results">Results : </p>
+
+                    <input type="text" id="input-field" autocomplete="off" autofocus>
+
+
                     <div class="typing-actions">
-                        <button class="typing-actions-button1"><i class="fa-solid fa-pause fa-xl"></i> Pause</button>
+                        <button class="typing-actions-button1">
+                            Pause
+                        </button>
+                        <button class="typing-actions-button-stop">
+                            Stop
+                        </button>
                     </div>
+
                 </div>
 
                 <div class="typing-startgame">
-                    <button>Start Game</button>
+                    <div class="typing-time-select">
+                        <label>Time:</label>
+                        <select id="time-mode">
+                            <option value="30">30s</option>
+                            <option value="60" selected>60s</option>
+                            <option value="90">90s</option>
+                            <option value="120">120s</option>
+                        </select>
+                    </div>
+                    <button id="start-btn">
+                        Start Game
+                    </button>
+                    
                 </div>
 
-            <div class="typing-stats">
-                <h1 class="typing-stats-advice">Don't give up !</h1>
-                <div class="typing-stats-result">
-                    <div class="dashboard-text-child dashboard-text-greetings">
-                        <h1>SPEED </h1>
-                        <h3>1000000000000000wpm</h3>
+                <div class="typing-stats">
+
+                    <h1 class="typing-stats-advice">
+                        Results
+                    </h1>
+
+                    <div class="typing-stats-result">
+
+                        <div class="dashboard-text-child dashboard-text-greetings">
+                            <h1>SPEED</h1>
+                            <h3 id="final-wpm">-</h3>
+                        </div>
+
+                        <div class="dashboard-text-child dashboard-text-quote">
+                            <h1>ACCURACY</h1>
+                            <h3 id="final-accuracy">-</h3>
+                        </div>
+
+                        <div class="dashboard-text-child dashboard-text-goal">
+                            <h1>RESUME</h1>
+                            <h3 id="final-message">Waiting...</h3>
+                        </div>
+
                     </div>
-                    <div class="dashboard-text-child dashboard-text-quote">
-                        <h1>ACCURACY</h1>
-                        <h3>100%</h3>
+
+                    <div class="typing-stats-actions">
+                        <button id="play-again">
+                            Play Again
+                        </button>
+                        <button id="save-session">
+                            Save
+                        </button>
                     </div>
-                    <div class="dashboard-text-child dashboard-text-goal">
-                        <h1>RESUME</h1>
-                        <h3>YOU PLAYED GOOD</h3>
-                    </div>
+
                 </div>
-                <div class="typing-stats-actions">
-                    <button>Play again</button>
-                    <button>Go to dashboard</button>
-                </div>
+
             </div>
         </div>
     </section>
