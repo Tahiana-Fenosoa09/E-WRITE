@@ -1,0 +1,360 @@
+@media (width <=428px) {
+    .header {
+        height: auto;
+        padding: 5vh 1vh;
+    }
+
+    .header-outerlist {
+        flex-direction: column;
+    }
+
+    .header-innerlist {
+        flex-direction: column;
+        min-width: 100vw;
+        display: none;
+    }
+
+    .header-innerlist-responsive {
+        display: flex !important;
+    }
+
+    .header-changetheme {
+        display: none;
+    }
+
+    .header-innerlist-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-login button {
+        width: 100%;
+    }
+
+    .header-logo-responsive-i {
+        display: block;
+        color: var(--pjBlue);
+    }
+
+    .section-ourvalues {
+        display: none;
+    }
+
+    .section-landingpage {
+        height: auto;
+    }
+
+    .landingpage-mainactions h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 8vh;
+    }
+
+    .landingpage-mainactions p {
+        max-width: 100%;
+    }
+
+    .landingpage-img {
+        display: none;
+    }
+
+    .landingpage-actions {
+        flex-direction: column;
+    }
+
+    .landingpage-actions button {
+        min-width: 90vw;
+        padding: 3vh 4vw;
+    }
+
+    .section-aboutapp {
+        padding: 2.5vh;
+    }
+
+    .section-aboutapp h1 {
+        font-size: 6vh;
+    }
+
+    .aboutapp-grid {
+        flex-direction: column-reverse;
+
+    }
+
+    .aboutapp-text {
+        max-width: 100%;
+    }
+
+    .aboutapp-text h2 {
+        font-size: 4.5vh;
+        text-align: center;
+    }
+
+    .aboutapp-pic {
+        width: 100%;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-logo {
+        font-size: 4vh;
+    }
+
+    .section-game {
+        flex-direction: column;
+    }
+
+    .game-navigation {
+        flex-direction: row;
+        min-width: 100%;
+        max-height: 10vh;
+        /* gap: 6vh; */
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .game-mainlogo {
+        display: none;
+    }
+
+    .game-navigation-nonresponsive {
+        display: none
+    }
+
+    .game-navigation-nonresponsive-screen {
+        display: flex !important;
+        gap: 5vh;
+        justify-content: center;
+        width: 15%;
+        height: auto;
+        position: absolute;
+        padding: 2vh;
+        right: 0%;
+        bottom: -225%;
+        z-index: 4;
+        background: var(--pjBlue);
+    }
+
+    .game-logo-responsive-i {
+        display: block;
+    }
+
+    .game-navigation-showhide {
+        display: none;
+    }
+
+    .game-dashboard {
+        height: auto;
+        gap: 5vh;
+        align-items: center;
+    }
+
+    .game-dashboard-pagename {
+        font-size: 5vh;
+        margin-left: none;
+    }
+
+    .dashboard-text {
+        padding: 2vh;
+        flex-direction: column;
+        gap: 5vh;
+        height: 100%;
+    }
+
+    .dashboard-text .dashboard-text-child {
+        width: 100%;
+    }
+
+    .dashboard-gamesummary {
+        border-radius: 0;
+    }
+
+    .dashboard-summary-actions {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .dashboard-summary-actions button {
+        min-width: 40vw;
+    }
+
+    .game-community-wrapper {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .game-community-rank {
+        width: 100%;
+        min-height: 80vh;
+    }
+
+    .game-community-news {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .typing-levels {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .typing-levels-select select {
+        width: 50vw;
+        padding: 1.5vh;
+    }
+
+    .typing-levels-select label {
+        font-size: 3vh;
+    }
+
+    .typing-startgame button {
+        width: 50vw;
+    }
+
+    .typing-actions button {
+        width: 50vw;
+    }
+
+    .game-tutorials-choice {
+        flex-direction: column;
+
+    }
+
+    .game-tutorials-video {
+        width: 100%;
+    }
+
+    .game-tutorials-sheets {
+        width: 100%;
+    }
+
+    .game-tutorials-video-youtube-heading {
+        width: 100%;
+    }
+
+    .game-tutorials-video-youtube-heading p {
+        max-width: none;
+        width: 100%;
+    }
+
+    .game-tutorials-video-youtube-heading a {
+        width: 50vw;
+    }
+
+    .game-tutorials-exit {
+        width: 10vw;
+        top: 0%;
+        left: 0%;
+    }
+
+    .game-tutorials-documentation-heading {
+        width: 100%;
+    }
+
+    .game-tutorials-documentation-heading p {
+        max-width: none;
+        width: 100%;
+    }
+
+    .game-tutorials-documentation-heading a {
+        width: 50vw;
+    }
+
+    .game-tutorials-documentation-grid {
+        width: 100%;
+    }
+
+    .game-tutorials-documentation-grid p {
+        font-size: 3vh
+    }
+
+    .game-tutorials-video-youtube-grid-responsive {
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+        align-items: center;
+    }
+
+    .game-tutorials-video-youtube-grid {
+        display: none;
+    }
+
+    .game-settings details {
+        width: 100%;
+        min-height: 10vh;
+    }
+
+    .game-settings-arrowdown {
+        height: 10vh;
+        width: 20vw
+    }
+
+    .typing-stats {
+        height: auto;
+        padding: 5vh;
+    }
+
+    .typing-stats-advice {
+        font-size: 5vh;
+    }
+
+    .typing-stats-result {
+        height: auto;
+        flex-direction: column;
+        gap: 3vh;
+    }
+
+
+    .typing-stats-result .dashboard-text-child {
+        min-width: 90vw;
+        min-height: 20vh;
+    }
+
+    .typing-stats-actions {
+        flex-direction: column;
+    }
+
+    .typing-stats-actions button {
+        width: 90vw;
+    }
+
+    .auth-form {
+        width: 90%;
+        height: auto;
+    }
+
+    .auth-form button {
+        width: 50vw;
+        font-size: 3vh;
+    }
+
+    .auth-signingup {
+        width: 90%;
+        height: auto;
+    }
+
+    .auth-signingup button {
+        width: 50vw;
+        font-size: 3vh;
+    }
+
+    .auth-input-container input {
+        width: 80vw;
+    }
+
+    .section-redirecting h1{
+        text-align:center;
+    }
+
+    .redirecting-guest{
+        width: 50vw;
+        font-size: 3vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

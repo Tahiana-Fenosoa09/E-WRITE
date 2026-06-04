@@ -1,0 +1,57 @@
+.footer{
+    height:80vh;
+    padding:2vh;
+    display:flex;
+    width:100%;
+    flex-direction: column;
+    gap:5vh;
+    justify-content: center;
+    align-items: center;
+    background:var(--pjBlue);
+    color:var(--pjBeige);
+}
+
+.footer-feedback{
+    display:flex;
+    flex-direction: column;
+    gap:2vh;
+    justify-content: center;
+    align-items: left;
+}
+
+.footer-feedback button{
+    padding:1vh;
+    border: none;
+    border-radius: 10px;
+    background:var(--pjBeige);
+    color:var(--pjBlue);
+    font-weight: 600;
+    font-size: 2vh;
+}
+
+.footer-rate{
+    display:flex;
+    flex-direction: column;
+    gap:5vh;
+}
+
+.footer-ratestars{
+    display:flex;
+    gap:2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-stars i{
+    font-size:5vh;
+}
+
+.footer-logo{
+    font-size:6vh;
+    color:var(--pjBeige);
+    letter-spacing: 1vw;
+}
+
+.footer-logo h1{
+    font-family: "Angkor";
+}

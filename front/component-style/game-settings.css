@@ -1,0 +1,66 @@
+.game-settings{
+    height:100vh;
+    width:100%;
+    display:none;
+    padding:10vh 5vh;
+    align-items: center;
+    flex-direction: column;
+    gap:5vh;
+
+}
+
+/* .game-settings-show{
+    display:flex !important;
+} */
+
+.game-settings h1{
+    font-size:5vh;
+    color:#10288C;
+}
+
+.game-settings details{
+    width:50%;
+    height:auto;
+    font-weight:500;
+    font-size:3vh;
+    background:white;
+    border-radius: 10px;
+}
+
+details summary{
+    list-style: none;
+    display:flex;
+    justify-content:space-between;
+}
+
+.game-settings ul{
+    display:flex;
+    padding:1vh;
+    flex-direction: column;
+    gap:1vh;
+}
+
+.game-settings ul li{
+    list-style: none;
+    background:#10288C;
+    color:white;
+    font-weight:600;
+    padding:1vh;
+    border-radius: 5px;
+}
+
+
+.game-settings-arrowdown{
+    background:#10288C;
+    border-radius:0 10px 10px 0;
+    height:8vh;
+    width:5vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.game-settings-title{
+    padding:2vh;
+}
